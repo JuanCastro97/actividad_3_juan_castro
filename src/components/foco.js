@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
-import {Image, TouchableOpacity, View} from 'react-native';
+import {Image, View, TouchableOpacity} from 'react-native';
 
 
 
 const foco = () => {
   
-  const[estaus, setEstatus] = useState(false);
+  const[estatus, setEstatus] = useState(false);
   
   return (
     <View>
         
-        <TouchableOpacity onPress={() => {setEstatus(!estatus ) } } >
+        <TouchableOpacity onPress={ () => {setEstatus(!estatus) } }>
 
-        <Image source={estaus ? require('../../img/focoOn.png') : require('../../img/focoOff.png')}
+        <Image source={estatus ? require('../../img/focoOn.png') : require('../../img/focoOff.png')}
         style={{ width: 300, height: 300}}
         />
 
@@ -24,3 +24,7 @@ const foco = () => {
 }
 
 export default foco
+
+
+ 
+ 
